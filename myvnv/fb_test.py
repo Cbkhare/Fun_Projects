@@ -10,7 +10,7 @@ token = 'YOUR_ACCESS_TOKEN'
 g = facebook.GraphAPI(token)
 profile = g.get_object("me")
 
-Posts = g.get_connections("me", "Posts")
+Posts = g.get_connections("me", "feed")
 i=0  #counter
 p_wish = ['bday','birthday']
 messg_id = []
