@@ -12,7 +12,7 @@ profile = g.get_object("me")
 
 Posts = g.get_connections("me", "feed")
 i=0  #counter
-p_wish = ['bday','birthday']
+p_wish = ['bday','birthday','happy']
 messg_id = []
 count = 0
 for Post in Posts['data']:
