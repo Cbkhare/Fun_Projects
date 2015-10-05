@@ -11,9 +11,8 @@ g = facebook.GraphAPI(token)
 profile = g.get_object("me")
 
 Posts = g.get_connections("me", "feed")
-i=0  #counter
-p_wish = ['bday','birthday','happy']
-messg_id = []
+p_wish = ['bday','birthday','happy','hbd']
+messg_id = []      #Can also be implemented using dictionary with key as messg_id and value as messg
 count = 0
 for Post in Posts['data']:
   if "2015-10-0" in Post["created_time"] and Post['id'] not in contents:
@@ -39,7 +38,7 @@ for Post in Posts['data']:
 #g.put_wall_post(profile_id='me',message='Hello')
 print (messg_id)
 for value in messg_id:
-  g.put_comment(object_id=value, message='Thanks for the wishes :)'+'\n\n'+'.'+'\n\n'+'(This is an automated reply, I will get back to you once i come online)')
+  g.put_comment(object_id=value, message='Thanks :) ')
   if g.put_like(object_id=value):
     print('done')
 
